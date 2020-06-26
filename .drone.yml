@@ -1,12 +1,20 @@
 kind: pipeline
-type: docker
+type: ssh
 name: default
+
+server:
+  host: docker.kernelbug.org
+  user: flappie
+  password:
+    from_secret: password
 
 steps:
 - name: build
-  image: python:3.6.10-slim
+  image: commands
   commands:
-  - pip3 install -r requirements.txt
+  - git clone git@github.com:Naroj/flask-hello.git
+  - python3 -m venv /home/flappie/v
+  - /home/flappie/v/bin/pip install -r /home/flappie/flask-hello/requirements.txt
 
 trigger:
   branch:
