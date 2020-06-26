@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: test
+  image: python:3.6.10-slim
+  commands:
+  - pip3 install -r requirements.txt
+
+trigger:
+  event:
+  - promote
+  target:
+  - production
