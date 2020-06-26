@@ -5,7 +5,6 @@ name: default
 server:
   host: docker.kernelbug.org
   user: flappie
-  port: 443
   password:
     from_secret: password
 
@@ -22,5 +21,3 @@ trigger:
   - master
   event:
   - push
-
-
