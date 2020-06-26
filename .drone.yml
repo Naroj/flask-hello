@@ -9,10 +9,11 @@ server:
     from_secret: password
 
 steps:
-- name: build
-  image: commands
-  commands:
-  - git clone https://github.com/Naroj/flask-hello.git
+  - name: build
+    commands:
+      - git clone https://github.com/Naroj/flask-hello.git
+
+
 
 trigger:
   branch:
