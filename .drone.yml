@@ -3,13 +3,15 @@ type: docker
 name: default
 
 steps:
-- name: test
+- name: build
   image: python:3.6.10-slim
   commands:
   - pip3 install -r requirements.txt
 
 trigger:
-  event:
-  - promote
+  branch:
+  - master
   target:
   - production
+
+
