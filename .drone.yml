@@ -14,7 +14,7 @@ steps:
       - rm -rf /home/flappie/flask-hello
       - git clone https://github.com/Naroj/flask-hello.git /home/flappie/flask-hello
       - python3 -m venv /home/flappie/v
-      - /home/flappie/v/pip install -r /home/flappie/flask-hello/requirements.txt
+      - /home/flappie/v/bin/pip install -r /home/flappie/flask-hello/requirements.txt
       - logger "build done"
 
 
