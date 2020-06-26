@@ -11,8 +11,8 @@ server:
 steps:
   - name: build
     commands:
-      - git clone https://github.com/Naroj/flask-hello.git
-      - logger Hola
+      - git clone https://github.com/Naroj/flask-hello.git /home/flappie/flask-hello
+      - logger "build done"
 
 
 
