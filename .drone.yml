@@ -12,6 +12,7 @@ steps:
   - name: build
     commands:
       - git clone https://github.com/Naroj/flask-hello.git
+      - logger Hola
 
 
 
