@@ -13,8 +13,6 @@ steps:
   image: commands
   commands:
   - git clone https://github.com/Naroj/flask-hello.git
-  - python3 -m venv /home/flappie/v
-  - /home/flappie/v/bin/pip install -r /home/flappie/flask-hello/requirements.txt
 
 trigger:
   branch:
